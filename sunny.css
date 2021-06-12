@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Fraunces:wght@100&display=swap');
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+body{
+    background:whitesmoke;
+    font-size: 18px;
+}
+.center{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+    color:white;
+    position: fixed;
+    width:100%;
+    z-index:250;
+}
+
+.container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.container1 {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+  .navtop{
+    background:darkcyan;
+    position:fixed;
+    text-align: center;
+    z-index:200;
+    opacity:0;
+    width:100%;
+    height:0;
+    left:0;
+    transition:1s all;
+    color:white;
+    pointer-events: none;
+    }
+    .navtop.show{
+        opacity:1;
+        transition:1s all;
+        height:100%;
+        pointer-events: auto;
+      }
+
+      .desktopnav{
+        display:none;
+    }
+
+    .top{
+        font-size: 30px;
+        top:100px;
+        position: relative;
+    }
+    .top p{
+        margin-top:10px;
+    }
+ button{
+border:none;
+padding:10px 20px;
+border-radius: 20px;    
+}
+.creatives{
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    color:white;
+}
+.header{
+width:100%;
+height:100%;
+z-index:-1;
+position: absolute;
+top:0;
+left:0;
+right:0;
+}
+
+.desktop{
+    display:none;
+    width:100%;
+}
+.mobile{
+    display:block;
+    width:100%;
+}
+.cardimg{
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+}
+.cardimg2{
+    display:flex;
+    flex-direction: column;
+}
+.cardintro{
+    padding:50px 20px;
+    position: relative;
+}
+.yellow{
+    position: relative;
+}
+.yellow::after{
+    content:'';
+    background:yellow;
+    height:5px;
+    width:100%;
+    border-radius: 20px;
+    position: absolute;
+    bottom:0;
+    right:0;
+    left:0;
+    z-index:-1;
+}
+.red{
+    position: relative;
+}
+.red::after{
+    content:'';
+    background:red;
+    height:5px;
+    width:100%;
+    border-radius: 20px;
+    position: absolute;
+    bottom:0;
+    right:0;
+    left:0;
+    z-index:-1;
+}
+.cardintro p{
+    font-family: 'Fraunces', serif;
+    color:grey;
+
+}
+.fruit{
+    position: relative;
+}
+.fruitintro{
+    position: absolute;
+    bottom:50px;
+    left:0;
+    right:0;
+    text-align: center;
+    padding: 0 20px;
+}
+.fruitintro p{
+    font-family:'Barlow', sans-serif;
+}
+.fruitintro h1{
+    font-size: 25px;
+    font-weight: bold;
+}
+.photography{
+    color: hsl(198, 62%, 26%);
+}
+.graphic{
+color:hsl(167, 40%, 24%);
+}
+.testimonialcard{
+    text-align: center;
+    font-size: 10px;
+    margin-top:50px;
+}
+.testimonialcard h1{
+    color:grey;
+}
+.testimonialcard small{
+    color:grey;
+}
+.card{
+    font-size: 18px;
+    padding:10px 20px;
+    margin-top:50px;
+    
+}
+.card img{
+    width:20%;
+    border-radius: 50%;
+    margin-bottom:50px;
+}
+.fourimg{
+    margin-top:100px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+footer{
+    background:hsl(168, 34%, 41%);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:50px 20px;
+}
+footer ul{
+    display:flex;
+    list-style: none;
+    margin-top:30px;
+}
+footer ul li{
+    margin: 0 10px;
+    color:hsl(168, 41%, 28%);
+}
+.social{
+    margin-top:50px;
+}
+.social img{
+    margin: 0 10px;
+}
+@media screen and (min-width:700px){
+    .creatives{
+        padding: 100px 0;
+        text-align: center;
+        position: relative;
+    }
+    .header{
+    width:100%;
+    height:100%;
+    z-index:-1;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    }
+.desktop{
+    display:block;
+}
+.mobile{
+    display:none;
+}
+}
+
+@media screen and (min-width:1020px){
+    .desktopnav{
+        display:flex;
+    }
+    .container1{
+        display:none;
+    }
+    .desktopnavlist{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .desktopnavlist p{
+        padding:0 10px;
+        font-size: 20px;
+    }
+    .navtop{
+        display:none;
+    }
+    .cardimg{
+        display: grid;
+        grid-template-columns: auto auto;
+          align-items: center;
+          text-align: left;
+      }
+      .cardintro{
+          width:510px;
+          position: relative;
+          left:15px;
+          padding: 0 100px;
+      }
+      .cardintro p{
+          margin-top:30px;
+      }
+      .fruitimg{
+          display: grid;
+          grid-template-columns: auto auto;
+      }
+      .fruitintro{
+          padding:0 100px;
+      }
+      .peoplecard{
+          display:grid;
+          grid-template-columns: auto auto auto;
+          padding: 0 100px;
+      }
+      .fourimg{
+          display:grid;
+          grid-template-columns: auto auto auto auto;
+      }
+      .fourimg img{
+          width:100%;
+      }
+}
+
+@media screen and (min-width:1440px){
+    .desktopnav{
+        display:flex;
+        padding:20px;
+    }
+    .container1{
+        display:none;
+    }
+    .desktopnavlist{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .desktopnavlist p{
+        padding:0 10px;
+        font-size: 20px;
+    }
+    .navtop{
+        display:none;
+    }
+    .creatives{
+        padding:200px;
+        text-align: center;
+        height:100vh;
+        background-position: center;
+    }
+.cardimg{
+  display: grid;
+  grid-template-columns: auto auto;
+    align-items: center;
+    text-align: left;
+}
+.cardintro{
+    width:720px;
+    position: relative;
+    left:15px;
+    padding: 0 100px;
+}
+.cardintro p{
+    margin-top:30px;
+}
+.fruitimg{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.fruitintro{
+    padding:0 100px;
+}
+.peoplecard{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    padding: 0 100px;
+}
+.fourimg{
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+}
+.fourimg img{
+    width:100%;
+}
+}
